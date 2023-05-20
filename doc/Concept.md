@@ -24,6 +24,12 @@ k3d - k3d is a lightweight wrapper to run k3s (Rancher Lab’s minimal Kubernete
 |      Podman      |    +-    |   +  |  +  |
 
 #Demo
+k3d cluster create argo
+
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+kubectl port-forward svc/argocd-server -n argocd 8080:443&
 
 #Conclusion
 The best case for our project would be k3d
