@@ -11,6 +11,6 @@ do
 done
 
 PARAMETER="--namespace $namespace"
-echo $PARAMETER
+
 # Retrieve resource usage statistics from Kubernetes
 kubectl top pods $PARAMETER
